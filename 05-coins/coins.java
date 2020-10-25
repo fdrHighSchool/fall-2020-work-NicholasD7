@@ -46,4 +46,4 @@ class Main {
     System.out.print("The area of the triangle is: " + L2*L2/2);
     return L2 * L2 / 2;
   }
-}
+}    //comment
