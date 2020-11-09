@@ -13,25 +13,27 @@ class Main {
   public static String produceAnswer(String equation){
     int blank = equation.indexOf(" ");
     int length = equation.length();
-    String whole = equation.substring(equation.indexOf(" ") + 3, equation.indexOf("_"));
-    System.out.println(whole);
 
-    String num1 = equation.substring(0, blank);
-    String symbol = equation.substring((blank + 1), (blank + 2));
+    //String num1 = equation.substring(0, blank);
+    //String symbol = equation.substring((blank + 1), (blank + 2));
     String num2 = equation.substring((blank + 3), length);
 
-    System.out.println(num2);
 
     boolean name1 = num2.contains("/");
     boolean name2 = num2.contains("_");
 
     if (name1 == true) {
+      int dash2 = num2.indexOf("/");
       if (name2 == true) {
-        System.out.print("test2");
-      System.out.println("test");
+        int underscore2 = num2.indexOf("_");
+        String whole2 = num2.substring((blank + 3), underscore2);
+        String numerator2 = num2.substring(underscore2, dash2);
+
+        System.out.print(whole2);
+        System.out.println(numerator2);
       }
     }
-     return (num2);
+    return (num2);
   }
 }
 
